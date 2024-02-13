@@ -1,0 +1,74 @@
+(OK) 1. Base de données MySQL:
+
+(OK) a.les variétés de thé(id, nom, occupation_m2, rendement_kg_par_mois)
+(OK) b.les parcelles(id, numero, surface_hectares, variete_id)
+(OK) c.Utilisateurs(id, username, password, role) 
+(OK) d.les cueilleurs(id, user_id, nom, genre, date_naissance)  
+(OK) e.les catégories de dépenses(id, categorie)  
+(OK) f.les cueillettes(id, date, cueilleur_id, parcelle_id, poids_cueilli)
+(OK) g.les dépenses(id, date, categorie_id, montant)
+(OK) h.SalaireCueilleurs(cueilleur_id, montant_par_kg)
+
+2. Backoffice (page admin)(partie 1):
+a. Page de login pour l'administrateur:
+    _login.php:
+        i.(OK)simple boostrap(css)
+        ii.(OK)requêtes SQL pour interagir avec la base de données.
+        iii.fonction.
+
+    _dashboard.php
+        i.gestion_formulaires.php
+
+    _logout.php
+
+b. Formulaire de gestion des variétés de thé:
+    _gestion_varietes.php
+
+c. Formulaire de gestion des parcelles:
+    _gestion_parcelles.php
+
+d. Formulaire de gestion des cueilleurs:
+    _gestion_cueilleurs.php
+
+e. Formulaire de gestion des Cueillettes:
+    _gestion_cueillettes.php
+
+f. Formulaire de gestion des depenses:
+    _gestion_depenses.php
+
+g. Formulaire de gestion des catégories de dépenses:
+    _gestion_catégories_dépenses.php
+
+h. Configuration du montant du salaire par kg pour les cueilleurs:
+    _gestion_salaire_cueilleurs.php
+
+3. Frontoffice (utilisateur)(partie 1):
+a. Page de login pour les utilisateurs.
+    _log_user.html + CSS.
+
+b. Page de saisie des cueillettes avec champs pour la date, le cueilleur, la parcelle, le poids cueilli et la validation AJAX:
+    _saisie_cueillette
+    _ajax.js
+
+c. Page de saisie des dépenses avec champs pour la date, la catégorie de dépense et le montant.
+    _saisie_depense.php
+
+d. Page de résultats avec des champs pour la date de début et de fin, affichant le poids total de la cueillette, le poids restant sur les parcelles à la date de fin et le coût de revient par kg:
+    _resultats.php
+
+(OK)4. Sécurité:
+    _check_permissions.php (Backoffice)
+
+(OK)5. Fonction:
+Backoffice:
+   _insert_variete.php
+   _insert_parcelles.php
+   _insert_cueilleur.php
+   _insert_cueillette.php
+   _insert_depense.php
+   _insert_catégories_dépenses.php
+   _update_salaire_cueilleurs.php
+
+Frontoffice:
+   _traitement_cueillette.php
+   _traitement_depenses.php
